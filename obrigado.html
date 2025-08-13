@@ -8,9 +8,7 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
@@ -52,20 +50,39 @@
       width: 90%;
       max-width: 720px;
       border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5b;
+      transform: scale(1.05);
+    }
+
+    .whatsapp-btn img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
     }
 
     @media (max-width: 768px) {
-      .message h2 {
-        font-size: 1.5rem;
-      }
-
-      .message p {
-        font-size: 1rem;
-      }
-
-      video {
-        width: 95%;
-      }
+      .message h2 { font-size: 1.5rem; }
+      .message p { font-size: 1rem; }
+      video { width: 95%; }
+      .whatsapp-btn { font-size: 1rem; padding: 10px 20px; }
     }
   </style>
 </head>
@@ -79,6 +96,12 @@
     <source src="video-boas-vindas.mp4" type="video/mp4">
     Seu navegador não suporta vídeo HTML5.
   </video>
+
+  <!-- Botão do WhatsApp -->
+  <a class="whatsapp-btn" href="https://wa.me/5511999999999" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    Falar no WhatsApp
+  </a>
 </body>
 </html>
 
